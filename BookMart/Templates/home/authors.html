@@ -1,0 +1,76 @@
+{% load static %}
+<html>
+<head>
+<title>Authors</title>
+<link rel="stylesheet" href=" {% static "cssfiles/w3.css" %}">
+<link href='https://fonts.googleapis.com/css?family=Amarante' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Finger Paint' rel='stylesheet'>
+
+<style>
+body{
+background-color: navy;
+}
+.b{
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color:green;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 25px;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  background-color:white;
+}
+h1 {
+font-family: 'Finger Paint';font-size: 40px;color:white;
+      }
+      p{
+      font-family: 'Amarante';font-size: 25px;
+            }
+
+</style>
+</head>
+<body>
+<h1>BOOKMART</h1>
+<br/><br/>
+<table>
+<tr>
+<td width="1%"></td>
+<td width="30%" height="100%">
+  <div class="card">
+  <a href="{% url "kannada_books:tejaswi" %}">  <img src="{% static "images/z.jpg" %}" width="100%" height="140%">
+  <p><button class="b">Poornachandra Tejaswi</a></button></p>
+  </div>
+  </td>
+<td width="5%"></td>
+  <td width="30%" height="100%">
+  <div class="card">
+    <a href="{% url "kannada_books:karantha" %}"><img src="{% static "images/z2.jpg" %}" width="70%" height="90%">
+  <p><button class="b">Shivarama Karantha</a></button></p>
+  </div>
+</td>
+<td width="3%"></td>
+</tr>
+<tr></tr>
+<tr></tr>
+<tr>
+<td width="5%"></td>
+  <td width="30%" height="100%">
+  <div class="card">
+    <a href="{% url "english_books:rowling" %}"><img src="{% static "images/z3.jpg" %}" width="90%" height="30%">
+  <p><button class="b">J.K.Rowling</a></button></p>
+  </div>
+  <td width="3%"></td>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,89 @@
+body
+{
+	background:#eff5f5;
+}
+
+h1 {
+font-family: 'Finger Paint';font-size: 40px;
+      }
+      h2 {
+      font-family: 'Adamina';font-size: 40px;
+            }
+            h3{
+            font-family: 'Adamina';
+                  }
+                  .checked {
+                    color: orange;
+                  }
+      .text{
+        padding-left:780px;
+      }
+      h4{
+        color:#663399;
+      }
+      h5{
+        color:#cc0000;
+        padding-left:80px;
+        font-size:40px;
+      }
+      .b{
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: #eb2d53;
+        text-align: center;
+        cursor: pointer;
+        width: 20%;
+        font-size: 22px;
+      }
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 280px;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+        background-color:white;
+      }
+      .card button:hover {
+        opacity: 0.7;
+      }
+
+			.navbar {
+			  width: 100%;
+			  background-color: #555;
+			  overflow: auto;
+			}
+
+			.navbar a {
+			  float: left;
+			  padding: 12px;
+			  color: white;
+			  text-decoration: none;
+			  font-size: 17px;
+			}
+
+			.navbar a:hover {
+			  background-color: forestgreen;
+			}
+
+
+
+			@media screen and (max-width: 500px) {
+			  .navbar a {
+			    float: none;
+			    display: block;
+			  }
+			}
+			a:link {
+			text-decoration: none;
+			}
+			a:visited {
+			text-decoration: none;
+			}
+			a:hover {
+			text-decoration: none;
+			}
+			a:active {
+			text-decoration: none;
+			}

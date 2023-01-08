@@ -1,0 +1,58 @@
+{% load static %}
+<html>
+<head>
+<title>Kannada Books List</title>
+<link rel="stylesheet" href=" {% static "cssfiles/w3.css" %}">
+<link rel="stylesheet" href=" {% static "cssfiles/c3.css" %}">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link href='https://fonts.googleapis.com/css?family=Finger Paint' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Amarante' rel='stylesheet'>
+<style>
+body
+{
+	background:#6495ED;
+}
+h2{
+font-family: 'Amarante';font-size: 26px;color:white;
+			}
+h1 {
+      font-family: 'Finger Paint';font-size: 40px;color:navy;
+    }
+</style>
+</head>
+<body>
+  <div class="w3-cell-row"style="width:100%">
+  <div class="w3-container w3-blue w3-white">
+<h1>&nbsp;&nbsp;&nbsp;&nbsp;BOOKMART</h1>
+</div>
+</div>
+<br/>
+<div class="row">
+  <div class="column">
+    <div class="card">
+<a href="{% url "kannada_books:marali" %}">       <img src="{% static "images/s4.jpg" %}" width="60%" height="40%">
+      <h3><b>Marali Mannige</b></h3>   </a>
+      <h4>Shivarama Karantha</h4>
+  <div class="w3-container">
+          <p><span class="w3-tag w3-green">4.7&nbsp;<i class='fas fa-star' style='font-size:15px;color:white'></i></span></p>
+       </div>
+  <h4><b>Rs.350</b></h4>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+  <a href="{% url "kannada_books:mookajji" %}">     <img src="{% static "images/s1.jpg" %}" width="60%" height="40%">
+      <h3><b>Mookajjiya Kanasugalu</b></h3>    </a>
+      <h4>Shivarama Karantha</h4>
+	<div class="w3-container">
+          <p><span class="w3-tag w3-green">4.8&nbsp;<i class='fas fa-star' style='font-size:15px;color:white'></i></span></p>
+       </div>
+	<h4><b>Rs.175</b></h4>
+    </div>
+  </div>
+</div>
+<br/>
+
+</body>
+</html>

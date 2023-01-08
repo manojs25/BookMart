@@ -1,0 +1,73 @@
+{% load static %}
+<html>
+<head>
+<title>Kannada Books List</title>
+<link rel="stylesheet" href=" {% static "cssfiles/w3.css" %}">
+<link rel="stylesheet" href=" {% static "cssfiles/c3.css" %}">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link href='https://fonts.googleapis.com/css?family=Finger Paint' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Amarante' rel='stylesheet'>
+<style>
+body
+{
+	background:#6495ED;
+}
+h2{
+font-family: 'Amarante';font-size: 26px;color:white;
+			}
+h1 {
+      font-family: 'Finger Paint';font-size: 40px;color:navy;
+    }
+</style>
+</head>
+<body>
+  <div class="w3-cell-row"style="width:100%">
+  <div class="w3-container w3-blue w3-white">
+<h1>&nbsp;&nbsp;&nbsp;&nbsp;BOOKMART</h1>
+</div>
+</div>
+<br/>
+<div class="row">
+  <div class="column">
+		<div class="card">
+	<a href="{% url "english_books:potter7" %}">     <img src="{% static "images/h6.jpg" %}" width="60%" height="35%">
+			<h3><b>HARRY POTTER and the Deathly Hallows</b></h3>      </a>
+			<h4>J.K.Rowling</h4>
+			<div class="w3-container">
+					<p><span class="w3-tag w3-green">4.8&nbsp;<i class='fas fa-star' style='font-size:15px;color:white'></i></span></p>
+			 </div>
+	<h4><b>Rs.440</b></h4>
+		</div>
+	</div>
+
+  <div class="column">
+  <div class="card">
+<a href="{% url "english_books:potter2" %}">     <img src="{% static "images/h4.jpg" %}" width="60%" height="35%">
+    <h3><b>HARRY POTTER and the Chamber of Secrets</b></h3>      </a>
+    <h4>J.K.Rowling</h4>
+    <div class="w3-container">
+        <p><span class="w3-tag w3-green">4.6&nbsp;<i class='fas fa-star' style='font-size:15px;color:white'></i></span></p>
+     </div>
+<h4><b>Rs.265</b></h4>
+  </div>
+</div>
+
+
+<div class="column">
+  <div class="card">
+<a href="{% url "english_books:potter3" %}">     <img src="{% static "images/h5.jpg" %}" width="60%" height="35%">
+    <h3><b>HARRY POTTER and the Prioner of Azkaban</b></h3>     </a>
+    <h4>J.K.Rowling</h4>
+<div class="w3-container">
+        <p><span class="w3-tag w3-green">4.5&nbsp;<i class='fas fa-star' style='font-size:15px;color:white'></i></span></p>
+     </div>
+<h4><b>Rs.415</b></h4>
+  </div>
+</div>
+</div>
+
+</div>
+<br/>
+
+</body>
+</html>

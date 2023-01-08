@@ -1,0 +1,148 @@
+{% load static %}
+<html>
+<head><title>Log In</title>
+<link rel="stylesheet" href=" {% static "cssfiles/w3.css" %}">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link href='https://fonts.googleapis.com/css?family=Finger Paint' rel='stylesheet'>
+<style>
+   .error {color: #FF0000;}
+   body{
+        background-color:navy;
+        font-size: 17px;
+     /*
+
+
+
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;   */
+   }
+   h1 {
+   font-family: 'Finger Paint';font-size: 40px;color:white;
+         }
+         h3{
+           color: white;
+         }
+
+	p#p1{padding-right:20.8em;}
+	input[type=number]{
+    width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+
+		}
+
+	input[type=password]{
+    width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+border: none;
+
+		}
+
+    .button2 {
+      border-radius: 4px;
+      background-color:  #008080;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 28px;
+      padding: 20px;
+      width: 400px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    .button2 span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+
+    .button2 span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+
+    .button2:hover span {
+      padding-right: 25px;
+    }
+
+    .button2:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+
+
+	.button{
+    padding: 15px 25px;
+  font-size: 19px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  background-color:#bb1133;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px #999;
+		}
+    .button:hover {background-color: #4682B4}
+
+    .button:active {
+      background-color:#4682B4;
+      box-shadow: 0 1px #666;
+      transform: translateY(2px);
+    }
+    a:link {
+    text-decoration: none;
+    }
+
+    a:visited {
+    text-decoration: none;
+    }
+
+    a:hover {
+    text-decoration: underline;
+    }
+
+    a:active {
+    text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+<h1>&nbsp;&nbsp;&nbsp;&nbsp;BOOKMART</h1>
+<br/>
+<br/>
+<center>
+<div class="w3-cell-row" style="width:45%;height:90%">
+<div class="w3-panel w3-crimson  w3-round-xxlarge">
+<form method="POST">
+<br/><br/><br/>
+<h3>{{ form.errors }}</h3>
+<div class="w3-panel w3-round-xxlarge w3-white">
+{{ form.mobile }}
+</div>
+<div class="w3-panel w3-round-xxlarge w3-white">
+{{ form.passwd }}
+</div>
+{% csrf_token %}
+<button type="submit" class="button" value="login">LOG IN</button><br/>
+<br/><br/><br/><br/><br/>
+<button class="button2"><span><a href="register.php">Join BOOKMART</a></span></button>
+</form>
+</div>
+</div>
+</center>
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+{% load static %}
+<html>
+<head>
+<title>Millenium Series</title>
+<link rel="stylesheet" href="{% static "cssfiles/w3.css" %}">
+<link rel="stylesheet" href="{% static "cssfiles/c1.css" %}">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link href='https://fonts.googleapis.com/css?family=Finger Paint' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Amarante' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Adamina' rel='stylesheet'>
+<style>
+h6{
+  color:#cc0000;
+  padding-left:80px;
+  font-size:30px;
+}
+h5{
+  color:green;
+  padding-left:80px;
+  font-size:40px;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+}
+
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+  <div class="w3-cell-row"style="width:120%">
+          <div class="w3-container w3-blue w3-cell">
+            <h1>BOOKMART</h1>
+         </div>
+  </div>
+  <div class="navbar">
+  <a class="active" href="home.html"><i class='fas fa-home' style='font-size:25px;color:white'></i>&nbsp;Home</a>
+    <a class="active" href="bookslang.html"><i class='fas fa-book-open' style='font-size:23px;color:white'></i>&nbsp;Books</a>
+  <a class="active" href="info.php"><i class="fa fa-fw fa-user" style='font-size:23px;color:white'></i>User</a>
+  <a class="active" href="orders.php"><i class='fas fa-shopping-cart' style='font-size:23px'></i>&nbsp;My Orders</a>
+  </div>
+<br/><br/>
+
+
+
+<table align="left">
+  <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+  <tr>
+    <td width="90"></td>
+    <td>
+<div class="card">
+  <img src="{% static "images/p1.jpg" %}" width="150%" height="100%" align="left">
+  <br/><br/><br/>
+
+</div>
+</td>
+</tr>
+</table>
+
+
+
+
+
+<div class="text">
+<h2>Millenium Series(Set of 16 Books)</h2>
+<h3>K.P.Poornachandra Tejaswi</h3><br/>
+<h4>Ratings:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<i class='fas fa-star' style='font-size:18px;color:orange'></i>
+<i class='fas fa-star' style='font-size:18px;color:orange'></i>
+<i class='fas fa-star' style='font-size:18px;color:orange'></i>
+<i class='fas fa-star' style='font-size:18px;color:orange'></i>
+<i class='fas fa-star-half-alt' style='font-size:18px;color:orange'></i>
+<br/><br/>
+
+
+<h4>Price:</h4>
+<h5>Rs.1590</h5>
+<h6><strike>Rs.1850</strike></h6>
+
+
+<br/>
+<h4>Details:</h4>
+<table>
+<tr>
+<ul>
+        <td width="60"></td>
+        <td><li><b>Language<b></td>
+        <td width="80"></td>
+        <td>Kannada</td>
+</tr>
+<tr></tr><tr></tr><tr></tr><tr></tr>
+<tr>
+        <td width="60"></td>
+        <td><li><b>Publisher</b></td>
+        <td width="80"></td>
+        <td>Pusthaka Prakashana</td>
+</tr>
+<tr></tr><tr></tr><tr></tr><tr></tr>
+<tr>
+        <td width="60"></td>
+        <td><li><b>Binding</b></td>
+        <td width="80"></td>
+        <td>Paperback</td>
+</tr>
+</ul>
+
+
+</table>
+</div>
+<br/>
+<center>
+  <button class="b" id="myBtn">BUY NOW</button>
+<div id="myModal" class="modal">
+<div class="modal-content">
+    <span class="close">&times;</span>
+    <table>
+      <tr>
+        <td><font color="black" size="5">TITLE</font></td><td width="40"></td><td>:</td><td width="40"></td><td><font color="navy" size="6">Millenium Series</font></td>
+      </tr>
+      <tr></tr><tr></tr><tr></tr><tr></tr>
+      <tr>
+        <td><font color="black" size="5">AUTHOR</font></td><td></td><td>:</td><td></td><td><font color="navy" size="6">K.P.Poornachandra Tejaswi</font></td>
+      </tr>
+    <tr></tr><tr></tr><tr></tr><tr></tr>
+      <tr>
+        <td><font color="black" size="5">LANGUAGE</font></td><td></td><td>:</td><td></td><td><font color="navy" size="6">Kannada</font></td>
+      </tr>
+      <tr></tr><tr></tr><tr></tr><tr></tr>
+      <tr>
+        <td><font color="black" size="5">PRICE</font></td><td></td><td>:</td><td></td><td><font color="navy" size="6">1850</font></td>
+      </tr>
+      <tr></tr><tr></tr><tr></tr><tr></tr>
+      <tr>
+        <td><font color="black" size="5">QUANTITY</font></td><td></td><td>:</td><td></td><td><font color="navy" size="6">1</font></td>
+      </tr>
+      <tr></tr><tr></tr><tr></tr><tr></tr>
+      <tr>
+        <td><font color="black" size="5">DISCOUNT</font></td><td></td><td>:</td><td></td><td><font color="navy" size="6">260</font></td>
+      </tr>
+      <tr></tr><tr></tr><tr></tr><tr></tr>
+      <tr>
+        <td><font color="black" size="5">DELIVERY CHARGE</font></td><td></td><td>:</td><td></td><td><font color="navy" size="6">-</font></td>
+      </tr>
+      <tr></tr><tr></tr><tr></tr><tr></tr>
+      <tr>
+        <td><font color="black" size="5">TOTAL AMOUNT</font></td><td></td><td>:</td><td></td><td><font color="navy" size="6">1590</font></td>
+      </tr>
+
+
+    </table>
+    <br/>
+
+<a href="milleniump.php"><button class="b" class="myBtn">CONTINUE</button></a>
+
+  </div>
+
+</div>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</center>
+
+
+
+</body>
+</html>

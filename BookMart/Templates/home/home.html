@@ -1,0 +1,210 @@
+{% load static %}
+<html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href=" {% static "cssfiles/w3.css" %}">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link href='https://fonts.googleapis.com/css?family=Finger Paint' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Amarante' rel='stylesheet">
+</head>
+<style>
+h1 {
+	 font-family: 'Finger Paint';font-size: 40px;
+				 }
+	 h2{
+				 font-family: 'Amarante';font-size: 15px;
+			 }
+.card {
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ max-width: 300px;
+ margin: auto;
+ text-align: center;
+ font-family: arial;
+ background-color:white;
+}
+.price {
+ color: grey;
+ font-size: 22px;
+}
+.b{
+ border: none;
+ outline: 0;
+ padding: 12px;
+ color: white;
+ background-color: #000;
+ text-align: center;
+ cursor: pointer;
+ width: 100%;
+ font-size: 18px;
+}
+.b1
+{
+ border: none;
+outline: 0;
+padding: 12px;
+color: white;
+background-color:green;
+text-align: center;
+cursor:auto;
+width: 100%;
+font-size: 18px;
+}
+
+.card button:hover {
+ opacity: 0.7;
+}
+.checked {
+ color: orange;
+}
+.navbar {
+ width: 100%;
+ background-color: #555;
+ overflow: auto;
+}
+
+.navbar a {
+ float: left;
+ padding: 12px;
+ color: white;
+ text-decoration: none;
+ font-size: 17px;
+}
+
+.navbar a:hover {
+ background-color: forestgreen;
+}
+
+
+
+@media screen and (max-width: 500px) {
+ .navbar a {
+	 float: none;
+	 display: block;
+ }
+}
+a:link {
+text-decoration: none;
+}
+a:visited {
+text-decoration: none;
+}
+a:hover {
+text-decoration: none;
+}
+a:active {
+text-decoration: none;
+}
+body
+{
+ background:#eff5f5;
+}
+</style>
+<body>
+    <div class="w3-cell-row"style="width:100%">
+    <div class="w3-container w3-blue w3-cell">
+    <h1>&nbsp;&nbsp;&nbsp;&nbsp;BOOK MART</h1>
+    <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Explore the world of Literature</h2>
+    </div>
+    </div>
+
+    <div class="navbar">
+      <a class="active" href="{% url "langoption" %}"><i class='fas fa-book-open' style='font-size:18px;color:white'></i>&nbsp;Books</a>
+      <a class="active" href="{% url "authors" %}"><i class="far fa-user-circle" style='font-size:18px;color:white'></i>&nbsp;Authors</a>
+      <a class="active" href="{% url "profile" %}"><i class="fa fa-fw fa-user"></i>My Profile</a>
+      <a class="active" href="{% url "order_details" %}"><i class="fas fa-shopping-cart"></i>&nbsp;My Orders</a>
+      <a class="active" href="{% url "logout" %}"><i class="fa fa-fw fa-user"></i>Log Out</a>
+    </div>
+
+<table>
+<tr>
+<td width="25%" height="60%">
+<div class="card">
+  <p><button class="b1">Offer</button></p>
+  <a href="{% url "kannada_books:millenium" %}"><img src="{% static "images/p1.jpg" %}" width="95%" height="50%">
+  <h3><b>Millenium Series</b></h3></a>
+  <h4>Poornachandra Tejaswi</h4>
+  <h5>Rs.1590</h5>
+  <strike>Rs.1850</strike><br/>
+
+  <i class='fas fa-star' style='font-size:16px;color:orange'></i>
+  <i class='fas fa-star' style='font-size:16px;color:orange'></i>
+  <i class='fas fa-star' style='font-size:16px;color:orange'></i>
+  <i class='fas fa-star' style='font-size:16px;color:orange'></i>
+  <i class='fas fa-star-half-alt' style='font-size:16px;color:orange'></i>
+<h6>4.8</h6>
+<p><a href="{% url "kannada_books:millenium" %}"><button class="b">BUY NOW</button></a></p>
+</div>
+</td>
+
+<td width="2%"></td>
+<td width="25%" height="60%">
+<div class="card">
+  <p><button class="b1">Offer</button></p>
+  <a href="{% url "english_books:harrypotter" %}"><img src="{% static "images/h1.jpg" %}" width="100%" height="17%">
+  <h3><b>Harry Potter Series</b></h3></a>
+  <h4>J.K.Rowling</h4>
+  <h5>Rs.3520</h5>
+  <strike>Rs.4250</strike><br/>
+  <i class='fas fa-star' style='font-size:16px;color:orange'></i>
+  <i class='fas fa-star' style='font-size:16px;color:orange'></i>
+  <i class='fas fa-star' style='font-size:16px;color:orange'></i>
+  <i class='fas fa-star' style='font-size:16px;color:orange'></i>
+  <i class='fas fa-star-half-alt' style='font-size:16px;color:orange'></i>
+<h6>4.7</h6>
+<p><a href="{% url "english_books:harrypotter" %}"><button class="b">BUY NOW</button></a></p>
+</div>
+</td>
+
+
+<td width="2%"></td>
+
+
+
+<td width="25%" height="60%">
+<div class="card">
+  <p><button class="b1">Offer</button></p>
+  <a href="{% url "kannada_books:jugaricross" %}"><img src="{% static "images/p5.jpeg" %}" width="51%" height="50%">
+  <h3><b>Jugari Cross</b></h3></a>
+  <h4>K.P.Poornachandra Tejaswi</h4>
+  <h5>Rs.200</h5>
+  <strike>Rs.240</strike><br/>
+  <i class='fas fa-star' style='font-size:16px;color:orange'></i>
+  <i class='fas fa-star' style='font-size:16px;color:orange'></i>
+  <i class='fas fa-star' style='font-size:16px;color:orange'></i>
+  <i class='fas fa-star' style='font-size:16px;color:orange'></i>
+  <i class='fas fa-star-half-alt' style='font-size:16px;color:orange'></i>
+  <h6>4.8</h6>
+
+  <p><a href="{% url "kannada_books:jugaricross" %}"><button class="b">BUY NOW</button></a></p>
+</div>
+</td>
+
+
+
+
+<td width="2%"></td>
+
+
+<td width="40%" height="60%">
+<div class="card">
+  <p><button class="b1">Offer</button></p>
+  <a href="{% url "kannada_books:kanooru" %}"><img src="{% static "images/k1.jpg" %}" width="54%" height="66%">
+  <h3><b>&nbsp;&nbsp;&nbsp;&nbsp;Kanooru Heggadathi&nbsp;&nbsp;&nbsp;</b></h3></a>
+  <h4>Kuvempu</h4>
+  <h5>Rs.560</h5>
+  <strike>Rs.620</strike><br/>
+  <i class='fas fa-star' style='font-size:16px;color:orange'></i>
+  <i class='fas fa-star' style='font-size:16px;color:orange'></i>
+  <i class='fas fa-star' style='font-size:16px;color:orange'></i>
+  <i class='fas fa-star' style='font-size:16px;color:orange'></i>
+  <i class='fas fa-star-half-alt' style='font-size:16px;color:orange'></i>
+<h6>4.6</h6>
+  <p>  <a href="{% url "kannada_books:kanooru" %}"><button class="b">BUY NOW</button></a></p>
+</div>
+</td>
+</tr>
+</table>
+
+
+</body>
+</html>

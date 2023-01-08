@@ -1,0 +1,181 @@
+{% load static %}
+<html>
+<head>
+	<title>My Profile</title>
+	<link rel="stylesheet" href="{% static "cssfiles/w3.css" %}">
+<link href='https://fonts.googleapis.com/css?family=Special Elite' rel='stylesheet'>
+<link rel="stylesheet" href="w3.css">
+	<link href='https://fonts.googleapis.com/css?family=Share Tech Mono' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Grenze' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Play' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Alata' rel='stylesheet'>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<link href='https://fonts.googleapis.com/css?family=Finger Paint' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Amarante' rel='stylesheet'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+		body{
+			background-color:#eff5f5;
+		          }
+h1
+{
+	font-family: 'Share Tech Mono';
+		font-size:40px;
+		color:brown ;
+}
+h2
+{
+	font-family: 'Alata';
+		font-size:40px;
+		color:DarkSlateBlue ;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  background-color:white;
+}
+.price {
+  color: grey;
+  font-size: 22px;
+}
+.b{
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+.b1
+{
+  border: none;
+outline: 0;
+padding: 12px;
+color: white;
+background-color:green;
+text-align: center;
+cursor:auto;
+width: 100%;
+font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+.checked {
+  color: orange;
+}
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+.b{
+	border: none;
+	outline: 0;
+	padding: 12px;
+	color: white;
+	background-color:DarkCyan;
+	text-align: center;
+	cursor: pointer;
+	width: 10%;
+	font-size: 22px;
+}
+.b2{
+	border: none;
+	outline: 0;
+	padding: 12px;
+	color: white;
+	background-color:DarkCyan ;
+	text-align: center;
+	cursor: pointer;
+	width: 20%;
+	font-size: 22px;
+}
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: forestgreen;
+}
+
+
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+a:link {
+text-decoration: none;
+}
+a:visited {
+text-decoration: none;
+}
+a:hover {
+text-decoration: none;
+}
+a:active {
+text-decoration: none;
+}
+body
+{
+	background:#eff5f5;
+}
+h3{
+font-family: 'Finger Paint';font-size: 40px;
+			}
+h4{
+			font-family: 'Amarante';font-size: 15px;
+		}
+</style>
+</head>
+<body>
+
+<div class="w3-cell-row"style="width:100%">
+<div class="w3-container w3-blue w3-cell">
+<h3>&nbsp;&nbsp;&nbsp;&nbsp;BOOKMART</h3>
+<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Explore the world of Literature</h4>
+</div>
+</div>
+&nbsp;<a href="{% url "home" %}"><button class="b" class="myBtn"><i class='fas fa-home' style='font-size:25px;color:white'></i>&nbsp;HOME</button></a></center>
+<center>
+	<h2><font size="20" color="DarkOliveGreen ">My Profile</font></h2>
+<table>
+<tr>
+<td width="340"></td><td width="310"><h1> Name </h1></td><td><h1>:</h1></td><td width="120"></td><td><h2> {{ user_profile.name }} </h2></td>
+</tr>
+<tr></tr><tr></tr><tr></tr>
+<tr>
+<td></td><td><h1> Mobile No. </h1></td><td><h1>:</h1></td><td></td><td><h2> {{ user_profile.mobile }} </h2></td>
+</tr>
+<tr></tr><tr></tr><tr></tr>
+<tr>
+<td></td><td><h1> Email </h1></td><td><h1>:</h1></td><td></td><td><h2> {{ user_profile.email }} </h2></td>
+</tr>
+<tr></tr><tr></tr><tr></tr>
+<tr>
+<td></td><td><h1> DOB </h1></td><td><h1>:</h1></td><td></td><td><h2> {{ user_profile.dob}} </h2></td>
+</tr>
+<tr></tr><tr></tr><tr></tr>
+<tr>
+<td></td><td><h1> Address </h1></td><td><h1>:</h1></td><td></td><td><h2> {{ user_profile.address}} </h2></td>
+</tr>
+</table>
+<center><a href="{% url "profile_update" %}"><button class="b2" class="myBtn">Edit Details</button></a></center>
+
+</body>
+</html>

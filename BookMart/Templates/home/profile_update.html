@@ -1,0 +1,105 @@
+{% load static %}
+<html>
+<head>
+  <link rel="stylesheet" href="{% static "cssfiles/w3.css" %}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Finger Paint' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Amarante' rel='stylesheet'>
+<style>
+body{
+  /* The image used */
+  background-image: url("{% static "images/img2.jpg" %}");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1 {
+font-family: 'Finger Paint';font-size: 45px;color:black;
+      }
+      h2{
+      font-family: 'Amarante';font-size: 15px;
+            }
+* {box-sizing: border-box;}
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 40%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  background:#333333; /*dodgerblue;*/
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color:#262626;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 40%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+
+}
+.error {color: #FF0000;}
+</style>
+</head>
+<body>
+<center><h1 class="head1">UPDATE YOUR INFORMATION</h1></center>
+<br/>
+<hr/>
+<center>
+<form method="POST">
+	<span class="error"> </span>
+	  <div class="input-container">
+	    <i class="fa fa-user icon" style='font-size:24px'></i>
+	    {{ form.name }}
+	  </div>
+
+
+		<span class="error"><?php echo $er3; ?><?php echo $er4; ?></span>
+		  <div class="input-container">
+		    <i class="fa fa-envelope icon" style='font-size:24px'></i>
+		    {{ form.email }}
+		  </div>
+
+		  <span class="error"><?php echo $er5; ?></span>
+		  <div class="input-container">
+		    <i class="fas fa-address-book icon" style='font-size:24px'></i>
+		    {{ form.address }}
+
+		  </div>
+      {% csrf_token %}
+
+			<button type="submit" class="btn" value="Submit">Submit</button>
+</form>
+</center>
+</body>
+</html>

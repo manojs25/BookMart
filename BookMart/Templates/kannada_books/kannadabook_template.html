@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <title>{{ title }}</title>
+      <link rel="stylesheet" href=" {% static "cssfiles/w3.css" %}">
+      <link rel="stylesheet" href=" {% static "cssfiles/c1.css" %}">
+      <link rel="stylesheet" href=" {% static "cssfiles/c2.css" %}">
+      <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+      <link href='https://fonts.googleapis.com/css?family=Finger Paint' rel='stylesheet'>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href='https://fonts.googleapis.com/css?family=Amarante' rel='stylesheet'>
+      <link href='https://fonts.googleapis.com/css?family=Adamina' rel='stylesheet'>
+      <style>
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+      }
+
+
+      .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 60%;
+      }
+
+
+      .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      </style>
+  </head>
+  <body>
+    <div class="w3-cell-row"style="width:120%">
+            <div class="w3-container w3-blue w3-cell">
+              <h1>BOOKMART</h1>
+           </div>
+    </div>
+    <div class="navbar">
+    <a class="active" href="{% url "home" %}"><i class='fas fa-home' style='font-size:25px;color:white'></i>&nbsp;Home</a>
+    <a class="active" href="{% url "langoption" %}"><i class='fas fa-book-open' style='font-size:23px;color:white'></i>&nbsp;Books</a>
+    <a class="active" href="{% url "profile" %}"><i class="fa fa-fw fa-user" style='font-size:23px;color:white'></i>User</a>
+    <a class="active" href="{% url "order_details" %}"><i class='fas fa-shopping-cart' style='font-size:23px'></i>&nbsp;My Orders</a>
+    </div>
+  <br/><br/>
+
+
+
+  <table align="left">
+    <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+    <tr>
+      <td width="90"></td>
+      <td>
+  <div class="card">
+    <img src="{% static image %}" width="100%" height="80%" align="left">
+    <br/><br/><br/>
+
+  </div>
+  </td>
+  </tr>
+  </table>
+
+
+
+
+
+  <div class="text">
+  <h2>{{ book_name }}</h2>
+  <h3>{{ author }}</h3><br/>
+  <h4>Ratings:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="black"><b>{{ rating }}</b></font></h4>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <i class='fas fa-star' style='font-size:18px;color:orange'></i>
+  <i class='fas fa-star' style='font-size:18px;color:orange'></i>
+  <i class='fas fa-star' style='font-size:18px;color:orange'></i>
+  <i class='fas fa-star' style='font-size:18px;color:orange'></i>
+  <i class='fas fa-star-half-alt' style='font-size:18px;color:orange'></i>
+  <br/><br/>
+
+
+  <h4>Price:</h4>
+  <h5>Rs.{{ price }}</h5>
+
+
+
+  <br/>
+  <h4>Details:</h4>
+  <table>
+  <tr>
+  <ul>
+          <td width="60"></td>
+          <td><li><b>Language<b></td>
+          <td width="80"></td>
+          <td>{{ Language }}</td>
+  </tr>
+  <tr></tr><tr></tr><tr></tr><tr></tr>
+  <tr>
+          <td width="60"></td>
+          <td><li><b>Publisher</b></td>
+          <td width="80"></td>
+          <td>{{ Publisher }}</td>
+  </tr>
+  <tr></tr><tr></tr><tr></tr><tr></tr>
+  <tr>
+          <td width="60"></td>
+          <td><li><b>Binding</b></td>
+          <td width="80"></td>
+          <td>{{ Binding }}</td>
+  </tr>
+  </ul>
+
+
+  </table>
+  </div>
+  <br/>
+  <center>
+    <a href="{% url "order" book=book_name author=author price=price %}"><button class="b">BUY NOW</button></a>
+
+  </center>
+
+
+
+  </body>
+</html>

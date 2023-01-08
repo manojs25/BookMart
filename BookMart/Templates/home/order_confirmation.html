@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static "cssfiles/w3.css" %}">
+    <link rel="stylesheet" href="{% static "cssfiles/c1.css" %}">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link href='https://fonts.googleapis.com/css?family=Finger Paint' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Amarante' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Adamina' rel='stylesheet'>
+    <style>
+  .b2{
+  	border: none;
+  	outline: 0;
+  	padding: 12px;
+  	color: white;
+  	background-color:DarkCyan ;
+  	text-align: center;
+  	cursor: pointer;
+  	width: 20%;
+  	font-size: 22px;
+  }
+  </style>
+  </head>
+  <body>
+  	<div class="w3-cell-row"style="width:100%">
+  					<div class="w3-container w3-blue w3-cell">
+  						<h1>BOOKMART</h1>
+  				 </div>
+  </div>
+  <br/><br/><br/>
+  <center>
+  	<div class="w3-container">
+
+  	   <div class="w3-panel w3-card-4 w3-green"><h3><i class='far fa-check-circle' style='font-size:48px;color:white'></i>&nbsp;Order Placed Successfully</h3</div>
+  	</div>
+  	<center><a href="{% url "order_details" %}"><button class="b2" class="myBtn">My Orders</button></a></center>
+  </center>
+  </body>
+</html>
